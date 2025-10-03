@@ -1,16 +1,18 @@
-import pprint
+import  pprint as pp
 
 words = {}
-
-with open("dictionary.txt", "r") as file:
+with open('dictionary.txt', 'r') as file:
     for line in file:
-        entry = line.strip().split(" ")
-        if len(entry) == 2:
-            words[entry[0]] = entry[1]
+        line = line.strip()
+        assignments = line.split(" ")
+        if len(assignments) == 2:
+            words[assignments[0]] = assignments[1]
 
-pprint.pprint(words)
-words["US"] = "EU"
-
-with open("dictionary-updated.txt", "w") as file:
-    for word in words:
-        file.write(f"{word} {words[word]}\n")
+while True:
+    word = input('Enter a word: ')
+    if word in words:
+        print(f'The definition of "{word}" is: {words[word]}')
+    elif word == 'exit':
+        break
+    else:
+        print(f'No definition found for "{word}"')
