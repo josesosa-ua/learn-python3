@@ -1,0 +1,33 @@
+{
+  // Disable AI-powered suggestions and completions
+  // Keep classic IntelliSense for Python learning
+
+  // Disable GitHub Copilot
+  "github.copilot.enable": {
+    "*": false,
+    "python": false
+  },
+
+  // Disable inline suggestions (AI completions)
+  "editor.inlineSuggest.enabled": false,
+
+  // Disable Copilot completions
+  "github.copilot.editor.enableAutoCompletions": false,
+
+  // Keep basic IntelliSense working
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.parameterHints.enabled": true,
+
+  // Python specific - keep language server IntelliSense
+  "python.languageServer": "Pylance",
+  "python.analysis.autoImportCompletions": false,
+  "python.analysis.completeFunctionParens": false,
+  "python-envs.defaultEnvManager": "ms-python.python:conda",
+  "python-envs.defaultPackageManager": "ms-python.python:conda",
+  "python-envs.pythonProjects": []
+}
